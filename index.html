@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Cute!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ffd6f6, #e0b3ff);
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      margin-top: 2rem;
+      animation: floatText 3s ease-in-out infinite;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+      animation: fadeIn 3s ease-in forwards;
+    }
+    .cake {
+      width: 200px;
+      height: 200px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    .cake .layer {
+      width: 100%;
+      height: 60px;
+      background: #ff6ec7;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+    .cake .candle {
+      width: 10px;
+      height: 40px;
+      background: #fff;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .cake .flame {
+      width: 15px;
+      height: 15px;
+      background: gold;
+      border-radius: 50%;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: flicker 0.3s infinite;
+    }
+    .balloons {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .balloon {
+      width: 40px;
+      height: 50px;
+      background: pink;
+      border-radius: 50% 50% 50% 50%;
+      position: absolute;
+      animation: rise 8s infinite ease-in;
+    }
+    .balloon:nth-child(2) {
+      background: violet;
+      left: 30%;
+      animation-delay: 2s;
+    }
+    .balloon:nth-child(3) {
+      background: #ffccf9;
+      left: 60%;
+      animation-delay: 4s;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .star {
+      width: 5px;
+      height: 5px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes rise {
+      from { bottom: -100px; }
+      to { bottom: 100%; }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="balloons">
+    <div class="balloon" style="left: 10%;"></div>
+    <div class="balloon" style="left: 30%;"></div>
+    <div class="balloon" style="left: 70%;"></div>
+  </div>
+
+  <h1>Happy Birthday Cute! 🎉</h1>
+  <p>Wishing you a magical day full of love, laughter, and sparkle!</p>
+
+  <div class="cake">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+
+  <div class="stars">
+    <div class="star" style="top:10%;left:20%;"></div>
+    <div class="star" style="top:30%;left:50%;"></div>
+    <div class="star" style="top:60%;left:80%;"></div>
+    <div class="star" style="top:90%;left:10%;"></div>
+    <div class="star" style="top:40%;left:70%;"></div>
+  </div>
+</body>
+</html>
